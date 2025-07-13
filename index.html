@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Course Promotion</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --primary: #3498db;
+      --accent: #f39c12;
+      --bg: #ffffff;
+      --text: #333;
+      --card-bg: #f9f9f9;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* ======= Navigation ======= */
+    header {
+      background: #fff;
+      padding: 15px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-left {
+      font-size: 22px;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    .nav-toggle {
+      font-size: 24px;
+      cursor: pointer;
+      display: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-right img {
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    /* Mobile Menu */
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: block;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+      }
+      .nav-links.active {
+        display: flex;
+      }
+    }
+
+    /* ======= Banner ======= */
+    .banner {
+      background: var(--accent);
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    /* ======= Courses ======= */
+    .section {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 30px;
+      color: var(--primary);
+    }
+
+    .courses {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .course {
+      background: var(--card-bg);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .course:hover {
+      transform: translateY(-5px);
+    }
+
+    .course img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .course-content {
+      padding: 20px;
+    }
+
+    .course-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .course-coupon {
+      color: #e74c3c;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+    .course-link a {
+      display: inline-block;
+      padding: 8px 15px;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    /* ======= Contact Section ======= */
+    .contact {
+      background: #f0f0f0;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .contact h2 {
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    .contact-item {
+      margin: 10px 0;
+      font-size: 18px;
+    }
+
+    .contact-item i {
+      color: #27ae60;
+      margin-right: 10px;
+    }
+
+    .contact a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* ======= Footer ======= */
+    footer {
+      background: #eee;
+      padding: 15px;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ✅ Header / Navigation -->
+  <header>
+    <div class="nav-left">ACS Coupon Code</div>
+    <i class="fas fa-bars nav-toggle" onclick="toggleNav()"></i>
+    <div class="nav-links" id="navMenu">
+      <a href="#">Home</a>
+      <a href="#">Courses</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="nav-right">
+      <img src="hc.png" alt="Logo">
+    </div>
+  </header>
+
+  <!-- ✅ Banner -->
+  <div class="banner">
+    Use " 367766 "  Coupon Code 
+    to get 5% xtra discount in the course of <strong>ACS | HSC Crackers</strong> 
+  </div>
+
+  <!-- ✅ Courses Section -->
+  <section class="section">
+    <h2>The physics & Engineering course of ACS | HSC Crackers </h2>
+    <div class="courses">
+      <div class="course">
+        <img src="hsc27.jpeg" alt="ACS HSC 27 Physics Academic Cycle 1">
+        <div class="course-content">
+          <div class="course-title">ACS HSC 27 Physics Academic Cycle 1</div>
+          <div class="course-coupon">Coupon: 367766</div>
+          <div class="course-link"><a href="#">Enroll Now</a></div>
+        </div>
+      </div>
+      <div class="course">
+        <img src="hsc261st.jpeg" alt="HSC 26 পদার্থবিজ্ঞান ১ম পত্র ব্যাচ">
+        <div class="course-content">
+          <div class="course-title">HSC 26 পদার্থবিজ্ঞান ১ম পত্র ব্যাচ</div>
+          <div class="course-coupon">Coupon: 367766</div>
+          <div class="course-link"><a href="#">Enroll Now</a></div>
+        </div>
+      </div>
+<div class="course">
+        <img src="hsc262nd" alt="HSC 26 পদার্থবিজ্ঞান ২য় পত্র সাইকেল ১">
+        <div class="course-content">
+          <div class="course-title">HSC 26 পদার্থবিজ্ঞান ২য় পত্র সাইকেল ১</div>
+          <div class="course-coupon">Coupon: 367766</div>
+          <div class="course-link"><a href="#">Enroll Now</a></div>
+        </div>
+      </div>
+<div class="course">
+        <img src="engineering.jpeg" alt="Engineering Academic C & C++ Course">
+        <div class="course-content">
+          <div class="course-title">Engineering Academic C & C++ Course</div>
+          <div class="course-coupon">Coupon: 367766</div>
+          <div class="course-link"><a href="#">Enroll Now</a></div>
+        </div>
+      </div>
+      <div class="course">
+        <img src="hsc24.jpeg" alt="ভার্সিটি + গুচ্ছ Physics Batch 2024">
+        <div class="course-content">
+          <div class="course-title">ভার্সিটি + গুচ্ছ Physics Batch 2024</div>
+          <div class="course-coupon">Coupon: 367766</div>
+          <div class="course-link"><a href="#">Enroll Now</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ✅ How to Use Coupon Section -->
+<section class="section" id="coupon-guide">
+  <h2>কীভাবে কুপন কোডটি ব্যবহার করবেন? </h2>
+  <div class="coupon-guide-container">
+    <div class="guide-text">
+      <p>ACS | HSC Crackers এর যেকোনো সাইকেল বা কোর্সে ভর্তি হতে পারবেন এক্সট্রা ৫% ডিসকাউন্টে। নিচের প্রসেস ফলো করুন! </p>
+      <ul>
+        <li>" 367766 " কোডটি কপি করুন 
+       </li>
+        <li>উপরে দেওয়া <strong>"কোর্স লিংকে"</strong> যান</li>
+        <li>একটু নিচের দিকে গেলেই কুপন এপ্লাই করার সেকশন পাবেন, ওখানে <code> 367766</code> কোডটি  <strong>এপ্লাই</strong> করুন</li>
+        <li>কোড এপ্লাই হয়ে গেলেই আপনি ৫% এক্সট্রা ডিসকাউন্ট পেয়ে যাবেন </li>
+      </ul>
+    </div>
+    <div class="guide-image">
+      <img src="coupon.jpg" alt="Coupon Code Page">
+    </div>
+  </div>
+</section>
+
+  <!-- ✅ Contact Section -->
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-item">
+      <i class="fab fa-whatsapp"></i> <a href="https://wa.me/8801778682815" target="_blank">+880 1778682815</a>
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-envelope"></i> <a href="mailto:yourmail@gmail.com">abujeshan1139181@gmail.com</a>
+    </div>
+  </section>
+
+  <!-- ✅ Footer -->
+  <footer>
+Affiliate of AFS, HSC Crackers, ACS | 2025 |All rights reserved.
+  </footer>
+
+  <!-- ✅ JavaScript for Menu Toggle -->
+  <script>
+    function toggleNav() {
+      const nav = document.getElementById("navMenu");
+      nav.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
